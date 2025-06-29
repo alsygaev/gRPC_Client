@@ -1,0 +1,16 @@
+syntax = "proto3";
+package com.example.grpc;
+
+message Request {
+  string object = 1;
+
+  repeated string list = 2;
+}
+
+message Response {
+  string response = 1;
+}
+
+service MessageService {
+  rpc response(Request) returns(Response);
+}
